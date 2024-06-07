@@ -527,6 +527,11 @@ main {
                         width: 11rem;
                         background-color: transparent;
                         border: 1px solid #FFFFFF;
+
+                        &::placeholder {
+                            color: #FFFFFF;
+                            padding-left: .4rem;
+                        }
                     }
                 }
                 &__btn {

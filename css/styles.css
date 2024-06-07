@@ -468,6 +468,10 @@ main {
   background-color: transparent;
   border: 1px solid #FFFFFF;
 }
+.footer-container__subscribe-form__mail-input::placeholder {
+  color: #FFFFFF;
+  padding-left: 0.4rem;
+}
 .footer-container__subscribe-form__btn {
   display: flex;
   justify-content: center;
