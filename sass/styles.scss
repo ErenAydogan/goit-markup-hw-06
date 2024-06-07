@@ -1,0 +1,729 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@mixin Raleway-16 {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    letter-spacing: .15rem;
+}
+
+@mixin Roboto-18 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    letter-spacing: .2rem;
+}
+
+@mixin Roboto-17 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.7rem;
+    line-height: 3rem;
+    letter-spacing: .17rem;
+}
+
+@mixin Roboto-16 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    letter-spacing: .15rem;
+}
+
+@mixin Roboto-14 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: .125rem;
+}
+
+@mixin Roboto-13 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    letter-spacing: .112rem;
+}
+
+@mixin Roboto-12 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: .1rem;
+}
+
+@mixin Roboto-10 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    letter-spacing: .2rem;
+}
+
+
+*,
+*::before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    font-size: 10px;
+}
+
+header {
+    width: 100%;
+}
+
+main {
+    width: 100%;   
+}
+
+.navigation {
+    width: 85%;
+    height: 5rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-container {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        &__logo {
+            @include Raleway-16;
+            font-weight: 700;
+            color: #4D5AE5;
+
+            &-2 {
+                color: #2E2F42;
+            }
+        }
+
+        &__menu {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            &-item {
+                @include Roboto-14;
+                font-weight: 500;
+
+                &:first-child &__link {
+                    color: #404BBF;
+                }
+
+                &__link{
+                    text-decoration: none;
+                    color: #2E2F42;
+                }
+            }
+        }
+    }
+
+    &_mobile-menu {
+        display: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        border: none;
+    }
+}
+
+
+.contact {
+    flex: 2;
+    &-menu {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 1rem;
+        &__item {
+            @include Roboto-14;
+            font-weight: 400;
+
+            &-link {
+                text-decoration: none;
+                color: #434455;
+            }
+        }
+    }
+}
+
+.slider {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/herobg.jpg);
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-container {
+        @include Roboto-18;
+        font-weight: 700;
+        color: #fff;
+        width: 40%;
+        min-width: 21.6rem;
+        text-align: center;
+
+        &__title {
+            margin-bottom: 2rem;
+        }
+
+        &__btn {
+            @include Roboto-14;
+            background-color: #4D5AE5;
+            font-weight: 500;
+            color: #fff;
+            padding: 1rem 1.5rem;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.howtowork {
+    width: 100%;
+    padding: 5rem 0;
+
+    &-container {
+        width: 85%;
+        margin: 0 auto;
+        &__card {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style-type: none;
+
+            &-item {
+                width: calc((100% - 3rem) / 4);
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                &__icon {
+                    background-color: #F4F4FD;
+                    width: 100%;
+                    height: 10rem;
+                    border: 1px solid #8E8F99;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 6.4rem;
+                        height: 6.4rem;
+                    }
+                }
+
+                &__container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+
+                    &-title {
+                        @include Roboto-16;
+                        font-weight: 500;
+                        color: #2E2F42;
+                    }
+                    &-text {
+                        @include Roboto-14;
+                        font-weight: 400;
+                        color: 434455;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.our-team {
+    width: 100%;
+    background-color: #F4F4FD;
+    &__container{
+        margin: 0 auto;
+        width: 85%;
+        padding: 5rem 0;
+        &-title {
+            @include Roboto-17;
+            text-align: center;
+        }
+
+        &-members {
+            width: 100%;
+
+            &__list {
+                width: 100%;
+                list-style-type: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: .5rem;
+
+                &-card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: #FFFFFF;
+                    width: calc((100% - 3rem) / 4);
+
+                    &__img {
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    &__info {
+                        width: 90%;
+                        margin: .5rem auto;
+                        display: flex;
+                        flex-direction: column;
+                        gap: .5rem;
+
+                        &-name {
+                            @include Roboto-14;
+                            font-weight: 500;
+                            text-align: center;
+                            color: #2E2F42;
+                        }
+
+                        &-job {
+                            @include Roboto-12;
+                            font-weight: 400;
+                            text-align: center;
+                            color: #434455;
+                        }
+
+                        &-social {
+                            width: 100%;
+                            margin-bottom: 2rem;
+
+                            &__list {
+                                display: flex;
+                                justify-content: space-around;
+                                list-style-type: none;
+
+                                &-item {
+
+                                    a{
+                                        text-decoration: none;
+                                        background-color: #4D5AE5;
+                                        width: 2.5rem;
+                                        height: 2.5rem;
+                                        border-radius: 50%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        .fa-brands {
+                                            color: #fff;
+                                            font-size: 1.2rem;
+                                        }
+                                    }
+
+
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }          
+        }
+    }
+}
+
+.our-portfolio {
+    width: 100%;
+    &__container{
+        width: 85%;
+        margin: 5rem auto;
+        &__title {
+            @include Roboto-17;
+            text-align: center;
+        }
+        &__list {
+            width: 100%;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem; 
+
+            &-item {
+                
+                width: calc((100% - 4rem) / 3);
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                &__img-container{
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    
+
+                    &:hover &__text {
+                        top: 0;
+                    }
+
+                    &__img {
+                        width: 100%;
+                    }
+                    &__text {
+                        position: absolute;
+                        z-index: 100;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #4D5AE5;
+                        top: 200%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: all .4s ease-in-out;
+
+                        p {
+                            @include Roboto-12;
+                            font-weight: 400;
+                            width: 70%;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                &__container{
+                    &-name{
+                        @include Roboto-14;
+                        font-weight: 500;
+                        color: #2E2F42;
+                    }
+
+                    &-type {
+                        @include Roboto-12;
+                        color: #434455;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    min-height: 15rem;
+    background-color: #2E2F42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+    &-container {
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        &__info {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+            gap: 1rem;
+            &__logo{
+                width: 50%;
+                @include Raleway-16;
+                font-weight: 700;
+                color: #4D5AE5;
+                text-decoration: none;
+    
+                &-studio {
+                    color: #F4F4FD;
+                }
+            }
+            &__text {
+                @include Roboto-10;
+                font-weight: 400;
+                color: #F4F4FD;
+                text-transform: none;
+            }
+        }
+
+        &__social {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
+            &-text {
+                @include Roboto-14;
+                font-weight: 500;
+                display: flex;
+                color: #FFFFFF;
+            }
+
+            &-list {
+                display: flex;
+                justify-content: space-around;
+                list-style-type: none;
+                gap: 1rem;
+
+                &__item {
+                    a{
+                        text-decoration: none;
+                        background-color: #4D5AE5;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .fa-brands {
+                            color: #fff;
+                            font-size: 1.2rem;
+                        }
+                    }                    
+                }
+            }
+        }
+
+        &__subscribe {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 1rem;
+
+            &-text {
+                @include Roboto-14;
+                font-weight: 500;
+                display: flex;
+                color: #FFFFFF;
+            }
+
+            &-form {
+                display: flex;
+                gap: .5rem;
+                justify-content: center;
+                &__mail {
+                    &-input {
+                        height: 2.5rem;
+                        width: 11rem;
+                        background-color: transparent;
+                        border: 1px solid #FFFFFF;
+                    }
+                }
+                &__btn {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    @include Roboto-12;
+                    font-weight: 500;
+                    display: flex;
+                    color: #FFFFFF;
+                    background-color: #4D5AE5;
+                    border: none;
+                    padding: .2rem .5rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Tablet */
+@media only screen and (max-width: 1157px) {
+    .navigation {
+        width: 95%;
+        &-container {
+            flex: 2;
+        }
+    }
+
+    .contact {
+        flex: 1;
+        &-menu {
+            align-items: flex-end;
+            flex-direction: column;
+            gap: .1rem;
+            &__item {
+                &-link {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    .howtowork {
+   
+        &-container {
+            width: 95%;
+            &__card {
+                &-item {
+                    width: calc((100% - 1rem) / 2);
+                    &__icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .our-team {
+        &__container{
+            width: 95%;
+            &-members {
+                &__list{
+                    &-card {
+                        width: calc((100% - 1rem) / 2);
+                    }
+                }
+            }
+        }
+    }
+
+
+    .our-portfolio {
+        &__container{
+            width: 95%;
+        }
+    }
+
+    .our-portfolio {
+        &__container{
+            width: 95%;
+            &__list {
+                &-item {
+                    width: calc((100% - 4rem) / 2);
+                }
+            }
+        }
+    }
+
+    .footer {
+        &-container {
+            flex-wrap: wrap;
+            width: 80%;
+
+            &__info {
+                width: 45%;
+                flex: unset;
+            }
+            &__social {
+                width: 45%;
+                flex: unset;
+            }
+
+            &__subscribe{
+                width: 100%;
+                flex: unset;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+/* Mobile */
+
+@media screen and (max-width: 767px) {
+    .navigation {
+        &-container {
+            &__menu {
+                display: none;
+            }
+        }
+
+        &_mobile-menu {
+            display: unset;
+        }
+    }
+
+    .contact {
+        &-menu {
+            display: none;
+        }
+    }
+
+    .howtowork {
+        &-container {
+            &__card {
+                &-item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+    .our-team {
+        &__container{
+            &-members {
+                &__list{
+                    &-card {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .our-portfolio {
+        &__container{
+            &__list {
+                &-item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .footer {
+        &-container {
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+
+            &__info {
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+            &__social {
+                width: 100%;
+                align-items: center;
+            }
+
+            &__subscribe{
+                width: 100%;
+                align-items: center;
+                flex-direction: column;
+                &-form {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

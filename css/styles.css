@@ -1,0 +1,594 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-size: 10px;
+}
+
+header {
+  width: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+.navigation {
+  width: 85%;
+  height: 5rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation-container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.navigation-container__logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
+  color: #4D5AE5;
+}
+.navigation-container__logo-2 {
+  color: #2E2F42;
+}
+.navigation-container__menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.navigation-container__menu-item {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.125rem;
+  font-weight: 500;
+}
+.navigation-container__menu-item:first-child .navigation-container__menu-item__link {
+  color: #404BBF;
+}
+.navigation-container__menu-item__link {
+  text-decoration: none;
+  color: #2E2F42;
+}
+.navigation_mobile-menu {
+  display: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.contact {
+  flex: 2;
+}
+.contact-menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.contact-menu__item {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.125rem;
+  font-weight: 400;
+}
+.contact-menu__item-link {
+  text-decoration: none;
+  color: #434455;
+}
+
+.slider {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/herobg.jpg);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-container {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  color: #fff;
+  width: 40%;
+  min-width: 21.6rem;
+  text-align: center;
+}
+.slider-container__title {
+  margin-bottom: 2rem;
+}
+.slider-container__btn {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.125rem;
+  background-color: #4D5AE5;
+  font-weight: 500;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.howtowork {
+  width: 100%;
+  padding: 5rem 0;
+}
+.howtowork-container {
+  width: 85%;
+  margin: 0 auto;
+}
+.howtowork-container__card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style-type: none;
+}
+.howtowork-container__card-item {
+  width: calc((100% - 3rem) / 4);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.howtowork-container__card-item__icon {
+  background-color: #F4F4FD;
+  width: 100%;
+  height: 10rem;
+  border: 1px solid #8E8F99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.howtowork-container__card-item__icon img {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+.howtowork-container__card-item__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.howtowork-container__card-item__container-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.15rem;
+  font-weight: 500;
+  color: #2E2F42;
+}
+.howtowork-container__card-item__container-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.125rem;
+  font-weight: 400;
+  color: 434455;
+}
+
+.our-team {
+  width: 100%;
+  background-color: #F4F4FD;
+}
+.our-team__container {
+  margin: 0 auto;
+  width: 85%;
+  padding: 5rem 0;
+}
+.our-team__container-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  line-height: 3rem;
+  letter-spacing: 0.17rem;
+  text-align: center;
+}
+.our-team__container-members {
+  width: 100%;
+}
+.our-team__container-members__list {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.our-team__container-members__list-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  width: calc((100% - 3rem) / 4);
+}
+.our-team__container-members__list-card__img {
+  width: 100%;
+}
+.our-team__container-members__list-card__img img {
+  width: 100%;
+}
+.our-team__container-members__list-card__info {
+  width: 90%;
+  margin: 0.5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.our-team__container-members__list-card__info-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.125rem;
+  font-weight: 500;
+  text-align: center;
+  color: #2E2F42;
+}
+.our-team__container-members__list-card__info-job {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  text-align: center;
+  color: #434455;
+}
+.our-team__container-members__list-card__info-social {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.our-team__container-members__list-card__info-social__list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.our-team__container-members__list-card__info-social__list-item a {
+  text-decoration: none;
+  background-color: #4D5AE5;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.our-team__container-members__list-card__info-social__list-item a .fa-brands {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.our-portfolio {
+  width: 100%;
+}
+.our-portfolio__container {
+  width: 85%;
+  margin: 5rem auto;
+}
+.our-portfolio__container__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7rem;
+  line-height: 3rem;
+  letter-spacing: 0.17rem;
+  text-align: center;
+}
+.our-portfolio__container__list {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.our-portfolio__container__list-item {
+  width: calc((100% - 4rem) / 3);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.our-portfolio__container__list-item__img-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.our-portfolio__container__list-item__img-container:hover .our-portfolio__container__list-item__img-container__text {
+  top: 0;
+}
+.our-portfolio__container__list-item__img-container__img {
+  width: 100%;
+}
+.our-portfolio__container__list-item__img-container__text {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #4D5AE5;
+  top: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+.our-portfolio__container__list-item__img-container__text p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  width: 70%;
+  color: #fff;
+}
+.our-portfolio__container__list-item__container-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.125rem;
+  font-weight: 500;
+  color: #2E2F42;
+}
+.our-portfolio__container__list-item__container-type {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+  color: #434455;
+}
+
+.footer {
+  width: 100%;
+  min-height: 15rem;
+  background-color: #2E2F42;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+.footer-container {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.footer-container__info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  gap: 1rem;
+}
+.footer-container__info__logo {
+  width: 50%;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
+  color: #4D5AE5;
+  text-decoration: none;
+}
+.footer-container__info__logo-studio {
+  color: #F4F4FD;
+}
+.footer-container__info__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+  color: #F4F4FD;
+  text-transform: none;
+}
+.footer-container__social {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer-container__social-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.125rem;
+  font-weight: 500;
+  display: flex;
+  color: #FFFFFF;
+}
+.footer-container__social-list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  gap: 1rem;
+}
+.footer-container__social-list__item a {
+  text-decoration: none;
+  background-color: #4D5AE5;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container__social-list__item a .fa-brands {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.footer-container__subscribe {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer-container__subscribe-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.125rem;
+  font-weight: 500;
+  display: flex;
+  color: #FFFFFF;
+}
+.footer-container__subscribe-form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.footer-container__subscribe-form__mail-input {
+  height: 2.5rem;
+  width: 11rem;
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+}
+.footer-container__subscribe-form__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  display: flex;
+  color: #FFFFFF;
+  background-color: #4D5AE5;
+  border: none;
+  padding: 0.2rem 0.5rem;
+}
+
+/* Tablet */
+@media only screen and (max-width: 1157px) {
+  .navigation {
+    width: 95%;
+  }
+  .navigation-container {
+    flex: 2;
+  }
+  .contact {
+    flex: 1;
+  }
+  .contact-menu {
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+  .contact-menu__item-link {
+    font-size: 1.2rem;
+  }
+  .howtowork-container {
+    width: 95%;
+  }
+  .howtowork-container__card-item {
+    width: calc((100% - 1rem) / 2);
+  }
+  .howtowork-container__card-item__icon {
+    display: none;
+  }
+  .our-team__container {
+    width: 95%;
+  }
+  .our-team__container-members__list-card {
+    width: calc((100% - 1rem) / 2);
+  }
+  .our-portfolio__container {
+    width: 95%;
+  }
+  .our-portfolio__container {
+    width: 95%;
+  }
+  .our-portfolio__container__list-item {
+    width: calc((100% - 4rem) / 2);
+  }
+  .footer-container {
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .footer-container__info {
+    width: 45%;
+    flex: unset;
+  }
+  .footer-container__social {
+    width: 45%;
+    flex: unset;
+  }
+  .footer-container__subscribe {
+    width: 100%;
+    flex: unset;
+  }
+}
+/* Mobile */
+@media screen and (max-width: 767px) {
+  .navigation-container__menu {
+    display: none;
+  }
+  .navigation_mobile-menu {
+    display: unset;
+  }
+  .contact-menu {
+    display: none;
+  }
+  .howtowork-container__card-item {
+    width: 100%;
+  }
+  .our-team__container-members__list-card {
+    width: 100%;
+  }
+  .our-portfolio__container__list-item {
+    width: 100%;
+  }
+  .footer-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+  }
+  .footer-container__info {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .footer-container__social {
+    width: 100%;
+    align-items: center;
+  }
+  .footer-container__subscribe {
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer-container__subscribe-form {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
