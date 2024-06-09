@@ -22,6 +22,7 @@ main {
 
 .navigation {
   width: 85%;
+  max-width: 1158px;
   height: 5rem;
   margin: 0 auto;
   display: flex;
@@ -141,6 +142,7 @@ main {
 }
 .howtowork-container {
   width: 85%;
+  max-width: 1158px;
   margin: 0 auto;
 }
 .howtowork-container__card {
@@ -199,6 +201,7 @@ main {
 .our-team__container {
   margin: 0 auto;
   width: 85%;
+  max-width: 1158px;
   padding: 5rem 0;
 }
 .our-team__container-title {
@@ -288,6 +291,7 @@ main {
 }
 .our-portfolio__container {
   width: 85%;
+  max-width: 1158px;
   margin: 5rem auto;
 }
 .our-portfolio__container__title {
@@ -371,6 +375,7 @@ main {
 }
 .footer-container {
   width: 85%;
+  max-width: 1158px;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -493,6 +498,7 @@ main {
 @media only screen and (max-width: 1157px) {
   .navigation {
     width: 95%;
+    max-width: 768px;
   }
   .navigation-container {
     flex: 2;
@@ -510,6 +516,7 @@ main {
   }
   .howtowork-container {
     width: 95%;
+    max-width: 768px;
   }
   .howtowork-container__card-item {
     width: calc((100% - 1rem) / 2);
@@ -519,15 +526,14 @@ main {
   }
   .our-team__container {
     width: 95%;
+    max-width: 768px;
   }
   .our-team__container-members__list-card {
     width: calc((100% - 1rem) / 2);
   }
   .our-portfolio__container {
     width: 95%;
-  }
-  .our-portfolio__container {
-    width: 95%;
+    max-width: 768px;
   }
   .our-portfolio__container__list-item {
     width: calc((100% - 4rem) / 2);
@@ -535,6 +541,7 @@ main {
   .footer-container {
     flex-wrap: wrap;
     width: 80%;
+    max-width: 768px;
   }
   .footer-container__info {
     width: 45%;
@@ -551,6 +558,9 @@ main {
 }
 /* Mobile */
 @media screen and (max-width: 767px) {
+  .navigation {
+    max-width: 400px;
+  }
   .navigation-container__menu {
     display: none;
   }
@@ -560,11 +570,20 @@ main {
   .contact-menu {
     display: none;
   }
+  .howtowork-container {
+    max-width: 400px;
+  }
   .howtowork-container__card-item {
     width: 100%;
   }
+  .our-team__container {
+    max-width: 400px;
+  }
   .our-team__container-members__list-card {
     width: 100%;
+  }
+  .our-portfolio__container {
+    max-width: 400px;
   }
   .our-portfolio__container__list-item {
     width: 100%;
@@ -575,6 +594,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 90%;
+    max-width: 400px;
   }
   .footer-container__info {
     align-items: center;
