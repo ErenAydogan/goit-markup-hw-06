@@ -9,6 +9,45 @@
     <title>Webstudio</title>
 </head>
 <body>
+    <div class="mobile__menu">
+        <div class="mobile__menu__container">
+            <ul class="mobile__menu__container__list">
+                <li class="mobile__menu__container__list-item">
+                    <a href="#">Studio</a>
+                </li>
+                <li class="mobile__menu__container__list-item">
+                    <a href="#">Portfolio</a>
+                </li>
+                <li class="mobile__menu__container__list-item">
+                    <a href="#">Contacts</a>
+                </li>
+            </ul>
+            <div class="mobile__menu__container__contact">
+                <ul class="mobile__menu__container__contact-info">
+                    <li class="mobile__menu__container__contact-info__item">
+                        <a href="tel:+110001111111">+11 (000) 111-11-11</a>
+                    </li>
+                    <li class="mobile__menu__container__contact-info__item">
+                        <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="mobile__menu__container__contact-social">
+                    <li class="mobile__menu__container__contact-social__item">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li class="mobile__menu__container__contact-social__item">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li class="mobile__menu__container__contact-social__item">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li class="mobile__menu__container__contact-social__item">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>             
+            </div>
+        </div>
+    </div>
     <header>
         <div class="navigation">
             <nav class="navigation-container">
@@ -37,9 +76,12 @@
                     </li>
                 </ul>
             </div>
-            <button class="navigation_mobile-menu">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="navigation__mobile__btn">
+                <div class="navigation__mobile__btn-1"></div>
+                <div class="navigation__mobile__btn-2"></div>
+                <div class="navigation__mobile__btn-3"></div>
+            </label>
         </div>
     </header>
     <main>

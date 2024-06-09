@@ -65,7 +65,9 @@
     box-sizing: border-box;
 }
 
+
 body {
+    position: relative;
     width: 100vw;
     font-size: 10px;
 }
@@ -76,6 +78,14 @@ header {
 
 main {
     width: 100%;   
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.mobile__menu{
+    display: none;
 }
 
 .navigation {
@@ -116,23 +126,40 @@ main {
                 @include Roboto-14;
                 font-weight: 500;
 
-                &:first-child &__link {
+
+                &:hover &__link {
                     color: #404BBF;
+                    padding-bottom: 1.3rem;
+                    border-bottom: .4rem solid #404BBF;
                 }
 
                 &__link{
                     text-decoration: none;
                     color: #2E2F42;
+                    transition: all .3s ease-in-out;
                 }
             }
         }
     }
 
-    &_mobile-menu {
-        display: none;
-        background-color: transparent;
-        font-size: 1.5rem;
-        border: none;
+    &__mobile {
+        &__btn {
+            display: none;
+            width: 2rem;
+            height: 2rem;
+            position: relative;
+            cursor: pointer;
+            z-index: 2000;
+            transition: all .3s ease-in-out;
+
+            div {
+                background-color: #333;
+                height: .3rem;
+                margin: .3rem 0;
+                width: 100%;
+                transition: all .3s ease-in-out;
+            }
+        }
     }
 }
 
@@ -656,6 +683,139 @@ main {
 /* Mobile */
 
 @media screen and (max-width: 767px) {
+    body:has(#menu-toggle:checked){
+        overflow: hidden;
+
+        .mobile__menu {
+            display: unset;
+        }
+
+        .navigation {
+            &__mobile
+            {
+                &__btn{
+                    position: relative;
+                    border: 1px solid #000;
+                    border-radius: 50%;
+                    width: 3rem;
+                    height: 3rem;
+                    &-1 {
+                        width: 50%;
+                        position: absolute;
+                        transform: rotate(45deg);
+                        top: 35%;
+                        left: 25%;
+                    }
+                    &-2 {
+                        display: none;
+                    }
+                    &-3 {
+                        width: 50%;
+                        position: absolute;
+                        transform: rotate(-45deg);
+                        top: 35%;
+                        left: 25%;
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile
+    {
+        &__menu{
+            display: none;
+            position: fixed;
+            background-color: #fff;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1000;
+
+            &__container {
+                margin: 5rem auto;
+                transform: translate(-50% -50%);
+                width: 90%;
+                height: 85%;
+                max-width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &__list {
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    &-item {
+                        @include Roboto-18;
+                        font-weight: 700;
+
+                        a {
+                            color: #2E2F42;
+                            text-decoration: none;
+                            transition: all .3s ease-in-out;
+                            
+                            &:hover {
+                                color: #404BBF;
+                            }
+                        }
+                    }
+                }
+
+                &__contact{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3rem;
+
+                    &-info{
+                        display: flex;
+                        flex-direction: column;
+                        list-style-type: none;
+                        gap: .5rem;
+                        &__item {
+                            @include Roboto-14;
+                            font-weight: 500;
+                            a {
+                                text-decoration: none;
+                                color: #434455;
+                                transition: all .3s ease-in-out;
+
+                                &:hover {
+                                    color: #4D5AE5;
+                                }
+                            }
+                        }
+                    }
+
+                    &-social{
+                        list-style-type: none;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        &__item{
+                            a {
+                                text-decoration: none;
+                                background-color: #4D5AE5;
+                                width: 2.5rem;
+                                height: 2.5rem;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                .fa-brands {
+                                    color: #fff;
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }   
     .navigation {
         max-width: 400px;
         &-container {
@@ -663,9 +823,11 @@ main {
                 display: none;
             }
         }
-
-        &_mobile-menu {
-            display: unset;
+        &__mobile
+        {
+            &__btn{
+                display: block;
+            }
         }
     }
 
